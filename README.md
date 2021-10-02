@@ -1,6 +1,6 @@
 # Ejemplo de biblioteca RESTful en Spring Boot - Kotlin
 
-[![Build](https://github.com/uqbar-project/eg-biblioteca-springboot-kotlin/actions/workflows/build.yml/badge.svg)](https://github.com/uqbar-project/eg-biblioteca-springboot/actions/workflows/build.yml) 
+[![Build](https://github.com/uqbar-project/eg-biblioteca-springboot-kotlin/actions/workflows/build.yml/badge.svg)](https://github.com/uqbar-project/eg-biblioteca-springboot/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/uqbar-project/eg-biblioteca-springboot-kotlin/branch/master/graph/badge.svg?token=0ZNNS99PJP)](https://codecov.io/gh/uqbar-project/eg-biblioteca-springboot-kotlin)
 
 Demostración de uso de [Spring Boot](https://spring.io/projects/spring-boot) sobre cómo declarar y probar una API REST con operaciones CRUD y búsqueda.
 
