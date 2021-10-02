@@ -1,0 +1,7 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-exception: true
+    context-path: /api/v1
+
