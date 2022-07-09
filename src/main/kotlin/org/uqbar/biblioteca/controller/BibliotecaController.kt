@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.databind.exc.MismatchedInputException
-import io.swagger.annotations.ApiOperation
+import io.swagger.v3.oas.annotations.Operation
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.uqbar.biblioteca.domain.Biblioteca
@@ -16,7 +16,7 @@ import org.uqbar.biblioteca.domain.NotFoundException
 class BibliotecaController(val biblioteca: Biblioteca) {
 
     @GetMapping("/libros")
-    @ApiOperation(
+    @Operation(summary =
         """Permite buscar libros que contengan cierto string en su título, u obtener todos los libros.
            Atiende requests de la forma GET /libros y GET /libros?titulo=xxx."""
     )
@@ -25,7 +25,7 @@ class BibliotecaController(val biblioteca: Biblioteca) {
     }
 
     @GetMapping("/libros/{id}")
-    @ApiOperation(
+    @Operation(summary =
         """Permite obtener un libro por su id.
            Atiende requests de la forma GET /libros/17."""
     )
@@ -34,7 +34,7 @@ class BibliotecaController(val biblioteca: Biblioteca) {
     }
 
     @DeleteMapping("/libros/{id}")
-    @ApiOperation(
+    @Operation(summary =
         """Permite eliminar un libro por su id.
            Atiende requests de la forma DELETE /libros/7."""
     )
@@ -45,7 +45,7 @@ class BibliotecaController(val biblioteca: Biblioteca) {
     }
 
     @PostMapping("/libros")
-    @ApiOperation(
+    @Operation(summary =
         """Permite crear un libro.
            Atiende requests de la forma POST /libros con un libro en el body (en formato JSON)."""
     )
@@ -59,7 +59,7 @@ class BibliotecaController(val biblioteca: Biblioteca) {
     }
 
     @PutMapping("/libros")
-    @ApiOperation(
+    @Operation(summary =
         """Permite crear un libro.
            Atiende requests de la forma POST /libros con un libro en el body (en formato JSON)."""
     )
