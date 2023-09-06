@@ -52,7 +52,7 @@ Demostración de uso de [Spring Boot](https://spring.io/projects/spring-boot) so
 
 #### Opción B: Desde línea de comandos
 
-1. Compilar y ejecutar el proyecto con el wrapper de maven: `./gradlew bootRun`
+1. Compilar y ejecutar el proyecto con el wrapper de Gradle: `./gradlew bootRun`
 
 Esta opción requiere menos recursos de sistema porque no es necesario ejecutar IntelliJ.
 
