@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
@@ -17,22 +18,22 @@ const val OK_MESSAGE = "ok"
 @SpringBootTest
 @AutoConfigureMockMvc
 @DisplayName("Dado un controller de biblioteca")
-class BibliotecaControllerTest(@Autowired val mockMvc: MockMvc) {
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class BibliotecaControllerTest(
+   @Autowired val mockMvc: MockMvc,
+   @Autowired val biblioteca: Biblioteca
+) {
 
-   companion object {
-      val biblioteca = Biblioteca()
-
-      @JvmStatic
-      @BeforeAll
-      fun initializeBiblioteca() {
-         biblioteca.run {
-            addLibro(1, "Juancito y los clonosaurios")
-            addLibro(5, "Ficciones")
-            addLibro(7, "El Aleph")
-            addLibro(11, "Historia universal de la infamia")
-            addLibro(13, "El informe de Brodie")
-            addLibro(17, "El libro de arena")
-         }
+   @BeforeAll
+   fun initializeBiblioteca() {
+      biblioteca.run {
+         removeAllLibros()
+         addLibro(1, "Juancito y los clonosaurios")
+         addLibro(5, "Ficciones")
+         addLibro(7, "El Aleph")
+         addLibro(11, "Historia universal de la infamia")
+         addLibro(13, "El informe de Brodie")
+         addLibro(17, "El libro de arena")
       }
    }
 

@@ -36,4 +36,8 @@ class Biblioteca {
             this.libros.filter { it.titulo.lowercase().contains(substring.lowercase()) }.toList()
         }
     }
+
+    fun removeAllLibros() {
+        libros.clear()
+    }
 }

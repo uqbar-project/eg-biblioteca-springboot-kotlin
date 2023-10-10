@@ -34,6 +34,7 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-common:2.2.0")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
     implementation("org.springframework.boot:spring-boot-devtools")
+    implementation("net.datafaker:datafaker:2.0.2")
 
     // testing
     testImplementation("org.springframework.boot:spring-boot-starter-test")
