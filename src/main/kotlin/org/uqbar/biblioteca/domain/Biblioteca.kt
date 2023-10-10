@@ -2,7 +2,7 @@ package org.uqbar.biblioteca.domain
 
 class Biblioteca {
 
-    val libros = mutableListOf<Libro>()
+    private val libros = mutableListOf<Libro>()
 
     /**
      * Helper method para agregar un libro
@@ -15,7 +15,7 @@ class Biblioteca {
         libro.validar()
         val index = this.libros.indexOfFirst { libro.id == it.id }
         if (index >= 0) {
-            this.libros.set(index, libro)
+            this.libros[index] = libro
         } else {
             this.libros.add(libro)
         }
