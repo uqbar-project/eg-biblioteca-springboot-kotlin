@@ -3,5 +3,6 @@ server:
     include-message: always
     include-binding-errors: always
     include-exception: false
+  servlet:
     context-path: /api/v1
 
