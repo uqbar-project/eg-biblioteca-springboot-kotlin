@@ -59,7 +59,7 @@ Esta opción requiere menos recursos de sistema porque no es necesario ejecutar 
 ### Cómo probar
 
 Probar los [ejemplos de API REST](#api-rest-en-ejemplos)
-* en el navegador: <http://localhost:8080/libros>
+
 * en [Postman](https://www.getpostman.com/), importar [este archivo](Biblioteca.postman_collection.json) que provee varios ejemplos de request listos para usar.
 * en [Insomnia](https://insomnia.rest/download), importar [este archivo](Biblioteca.insomnia_collection.json)
 
